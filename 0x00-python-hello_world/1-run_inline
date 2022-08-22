@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/env python3 $PYCODE
+/usr/bin/env python3 -c "$PYCODE"

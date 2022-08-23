@@ -7,7 +7,7 @@ def lowercaseAlphabets():
             continue;
         elif chr(c) == 'q':
             continue;
-        print("{}".format(chr(c)), end = " ");
+        print("{}".format(chr(c)), end = "");
 
 
 lowercaseAlphabets()

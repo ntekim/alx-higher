@@ -3,8 +3,11 @@
 #in lowercase
 def lowercaseAlphabets():
     for c in range(97, 123):
-        if c == 'q' or c == 'e':
+        if chr(c) == 'e':
             continue;
-        print(chr(c), end = " ");
+        elif chr(c) == 'q':
+            continue;
+        print("{}".format(chr(c)), end = " ");
+
 
 lowercaseAlphabets()

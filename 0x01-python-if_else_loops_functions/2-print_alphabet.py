@@ -4,6 +4,6 @@
 def lowercaseAlphabets():
     # lowercase
     for c in range(97, 123):
-        print(chr(c), end = " ");
+        print("{}".format(c));
 
 lowercaseAlphabets()

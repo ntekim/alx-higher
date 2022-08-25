@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 import sys
 
+
 def arguments():
     """Prints number and lists of arguments"""
 
-    argc = len(sys.argv)
+    argc = len(argv)
     argc = argc - 1
 
     if argc == 0:
@@ -16,5 +17,6 @@ def arguments():
         print("{} arguments:".format(argc), end="\n")
         for i in range(int(argc)):
             print("{}: {}".format(i + 1, sys.argv[i + 1]), end="\n")
+
 
 arguments()

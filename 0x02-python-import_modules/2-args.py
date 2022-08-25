@@ -7,9 +7,9 @@ def arguments():
     argc = len(sys.argv)
     argc = argc - 1
 
-    if argc == 1:
+    if argc == 0:
         print("{} arguments.".format(argc))
-    elif argc == 2:
+    elif argc == 1:
         print("{} argument:".format(argc), end="\n")
         print("{}: {}".format(argc - 1, sys.argv[1]), end="\n")
     elif argc > 1:

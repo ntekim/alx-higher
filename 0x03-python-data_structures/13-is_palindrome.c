@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 /**
  * is_palindrome - program check if singly linked list is palindrome
  * @head: list to check
@@ -9,27 +10,32 @@
 
 int is_palindrome(listint_t **head)
 {
-	unsigned int i, len = 0;
-	int list_data[];
+	listint_t *current = *head;
+	listint_t *reverse_list = NULL;
+	listint_t *next = NULL;
 
 	if (!head || !*head)
 		return (0);
 	else if (*head == NULL)
 		return (1);
 
-	while (*head)
+	while (current)
 	{
-		list_data[len] = head->p;
-		*head = head->next;
-		len++;
+		next = current->next;
+		current->next = reverse_list;
+		reverse_list = current;
+		current = next;
 	}
 
-	len = len + 1;
+	current = *head;
 
-	for (i = 0; i < len; i++)
+	while (current != NULL && *head != NULL)
 	{
-		if (list_data[i] != list_data[len - i])
+		if (current->n != reverse_list->n)
 			return (0);
+
+		current = current->next;
+		*head = (*head)->next;
 	}
 
 	return (1);
